@@ -10,6 +10,5 @@ public interface PracticeService {
 	public List<Practice> getAllUserDataList();
 	public void deleteUserDataById(int id);
 	public Optional<Practice> getUserDataById(int id); 
-	
-
+	public Optional<Practice> getUserBataByCity(String city);
 }

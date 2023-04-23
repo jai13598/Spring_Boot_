@@ -1,9 +1,16 @@
 package com.practice.practice.model;
 
+
+
+import com.practice.practice.User;
+
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
+
 
 @Entity
 public class Practice {
@@ -14,6 +21,10 @@ public class Practice {
 	private String userName;
 	private String userCity;
 	private String userState;
+	@Embedded
+	private User user;
+
+	
 	
 	public Practice() {
 		
@@ -52,6 +63,14 @@ public class Practice {
 	}
 
 
+
+
+
+
+	
+
+
+ 
 	
 	
 	

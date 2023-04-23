@@ -1,5 +1,8 @@
 package com.practice.practice.service;
 
+
+
+
 import java.util.List;
 import java.util.Optional;
 
@@ -38,5 +41,9 @@ public class PracticeServiceImp implements PracticeService{
 		return practicerepository.findById(id);
 	}
 
+	@Override
+	public Optional<Practice> getUserBataByCity(String city) {
+		return practicerepository.findByUserCity(city);
+	}
 	
 }

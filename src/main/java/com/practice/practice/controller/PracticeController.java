@@ -18,7 +18,7 @@ import com.practice.practice.service.PracticeService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/practice")
+@RequestMapping("/practice" )
 public class PracticeController {
 	
 	@Autowired
@@ -37,6 +37,11 @@ public class PracticeController {
 	@GetMapping("/get/{id}")
 	public Optional<Practice> getUserDataById(@PathVariable("id") int id) {
 		return practiceService.getUserDataById(id);
+	}
+	
+	@GetMapping("/get/city/{city}")
+	public Optional<Practice> getUserDataByCity(@PathVariable("city") String city){
+		return practiceService.getUserBataByCity(city);
 	}
 	
 	@DeleteMapping("/delete/{id}")
